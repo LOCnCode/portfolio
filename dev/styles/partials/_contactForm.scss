@@ -1,4 +1,12 @@
 
+.contactTitle {
+	width: 80%;
+	position: relative;
+}
+
+.contactText p {
+	padding: 0;
+}
 
 .contactForm {
 	width: 100%;
@@ -34,6 +42,11 @@ textarea {
 	padding-bottom: 22%;
 }
 
+.contactImage {
+	width: 20%;
+	margin-right: 5%;
+}
+
 .formButton {
 	background-color: transparent;
   border: 2px solid $SecondaryColour;
@@ -45,3 +58,10 @@ textarea {
 	margin-top: 3%;
 }
 
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	.detailsContact {
+		flex-direction: column;
+	}
+}

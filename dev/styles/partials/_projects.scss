@@ -1,5 +1,5 @@
 #projects:target {
-	padding-top: 70px;
+	padding-top: 90px;
 }
 
 .projectsFeature {
@@ -28,4 +28,55 @@
 
 .projectInfo {
 	margin-top: 4%;
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+	.projectInfo ul li {
+		font-size: 18px;		
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+	
+	.projectsFeature {
+		flex-direction: column;
+	}
+
+	.projContainer {
+		width: 90%;
+		margin: 2%;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.projImage {
+	background-color: $PrimaryColour;
+	padding: 2% 0;		
+		img {
+			width: 80%;
+		}
+	}
+
+	.projectInfo {
+		width: 50%;
+	}
+
+	.projectReverse {
+		flex-direction: row-reverse;
+		ul {
+			margin-right: 2%;
+			}
+		}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+
 }

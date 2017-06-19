@@ -174,7 +174,7 @@ footer p {
 @media (max-width: 768px) {
 
 body {
-		background-color: lightgreen;
+		// background-color: lightgreen;
 	}
 
 	.home {
@@ -184,6 +184,10 @@ body {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+	h4 {
+		font-weight: 800;
+	}
 
 	body {
 		background-color: lightblue;

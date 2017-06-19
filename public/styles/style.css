@@ -252,7 +252,7 @@ input.toggle {
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
   header {
-    height: 82px; }
+    height: 105px; }
   .nav {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -269,12 +269,15 @@ input.toggle {
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  h1 {
+    margin-top: 0; }
   .toggle {
     display: unset;
-    top: -10px;
+    top: -8px;
     right: -165px; }
   .navRight {
-    width: 25%; }
+    width: 25%;
+    position: fixed; }
   .navLinks {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -285,7 +288,7 @@ input.toggle {
             flex-direction: column;
     text-align: right;
     position: absolute;
-    top: 18px;
+    top: 25px;
     right: -170px; }
   a {
     color: #EC116E; }
@@ -296,7 +299,7 @@ input.toggle {
     margin: 0 5px; } }
 
 #about:target {
-  padding-top: 70px; }
+  padding-top: 90px; }
 
 .about {
   margin-bottom: 2%; }
@@ -320,18 +323,8 @@ input.toggle {
 
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
-.contactImage {
-  width: 20%; }
-
-.contactTitle {
-  width: 80%;
-  position: relative; }
-
-.contactText p {
-  padding: 0; }
-
 #tools:target {
-  padding-top: 72px; }
+  padding-top: 90px; }
 
 .toolsContainer {
   display: -webkit-box;
@@ -389,7 +382,7 @@ figcaption {
   font-weight: 400; }
 
 #projects:target {
-  padding-top: 70px; }
+  padding-top: 90px; }
 
 .projectsFeature {
   width: 100%;
@@ -418,6 +411,57 @@ figcaption {
 
 .projectInfo {
   margin-top: 4%; }
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  .projectInfo ul li {
+    font-size: 18px; } }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .projectsFeature {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .projContainer {
+    width: 80%;
+    margin: 2%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .projImage {
+    background-color: white;
+    padding: 2% 0; }
+    .projImage img {
+      width: 80%; }
+  .projectInfo {
+    width: 50%; }
+  .projectReverse {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse; }
+    .projectReverse ul {
+      margin-right: 2%; } }
+
+/* Landscape phones and down */
+.contactTitle {
+  width: 80%;
+  position: relative; }
+
+.contactText p {
+  padding: 0; }
 
 .contactForm {
   width: 100%; }
@@ -455,6 +499,10 @@ textarea {
 
 .contactLeft {
   padding-bottom: 22%; }
+
+.contactImage {
+  width: 20%;
+  margin-right: 5%; }
 
 .formButton {
   background-color: transparent;
@@ -621,12 +669,12 @@ footer p {
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-  body {
-    background-color: lightgreen; }
   .home {
     background-image: url(../../images/pic139.png); } }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  h4 {
+    font-weight: 800; }
   body {
     background-color: lightblue; } }

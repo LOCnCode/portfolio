@@ -1,3 +1,7 @@
+#about:target {
+	padding-top: 70px;
+}
+
 .about {
 	margin-bottom: 2%;
 }
@@ -11,12 +15,34 @@
 }
 
 .aboutDetails {
-	padding: 6% 0;
+	// padding: 6% 0;
 }
 
 .aboutText {
-	padding: 8% 0;
+	padding: 2% 0;
 	font-size: 16px;
 	line-height: 26px;
 	font-weight: 400;
+	// background-color: lightpink;
+}
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+	
+	body {
+		background-color: grey;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	
 }

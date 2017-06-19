@@ -14,13 +14,13 @@
 
 .formInput {
 	width: 100%;
-	border-bottom: 3px solid #e63950;
+	border-bottom: 3px solid $SecondaryColour;
 }
 
 input, textarea {
 	width: 100%;
 	font-family: 'Roboto', sans-serif;
-	color: #6b6969;
+	color: $Grey;
 	border: none;
 	padding: 1%;
 	margin-top: 4%;
@@ -36,7 +36,7 @@ textarea {
 
 .formButton {
 	background-color: transparent;
-  border: 2px solid #e63950;
+  border: 2px solid $SecondaryColour;
   margin: 4% 0;
   padding: 2% 5%;
 }
@@ -44,3 +44,4 @@ textarea {
 .relocation {
 	margin-top: 3%;
 }
+

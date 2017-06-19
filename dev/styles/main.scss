@@ -9,18 +9,25 @@
 @import 'partials/contactForm';
 
 body {
-	background-color: rgb(26, 3, 41);
+	background-color: $Purple;
+}
+
+.home {
+	height: 100vh;
+	background-image: url(../../images/flippedtwin.png);
+	background-position: center;
+	background-size: 100%;
+	background-repeat: no-repeat;
 }
 
 h1 {
 	color: $PrimaryColour;
-	// margin: 0;
 	font-size: 20px;
 	text-transform: uppercase;	
 }
 
 .nameSplit {
-	color: #EC116E;
+	color: $SecondaryColour;
 }
 
 h2 {
@@ -49,6 +56,7 @@ h3 {
 	color: $PrimaryColour;
 	font-size: 20px;
 	text-transform: uppercase;
+	width: 100%;
 }
 
 h3:after {
@@ -74,8 +82,19 @@ p, h4 {
 	font-weight: 400;
 }
 
+.section {
+	padding: 2% 0;
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.sectionTitle {
+	width: 100%;
+}
+
 .wrapper {
-	width: 1140px; //measured from psd
+	width: 80%; 
 	margin: 0 auto;
 }
 
@@ -88,23 +107,38 @@ p, h4 {
 	justify-content: center;
 }
 
-.section {
-	padding: 2% 0;
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+.detailsContainer {
+	width: 34%;
 }
 
-.sectionTitle {
+.detailsBox {
+	margin: 0;
+}
+
+.detailsContact {
+	padding-top: 5%;
+	padding-left: 6%;
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+}
+
+.featureContainer {
+	width: 66%;
+}
+
+.feature {
+	width: 75%;
+}
+
+.featureBox {
+	margin: auto;
+	padding: 5%;
+	background-color: $PrimaryColour;
+}
+
+.feature img {
 	width: 100%;
-}
-
-.home {
-	height: 100vh;
-	background-image: url(../../images/flippedtwin.png);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
 }
 
 footer {
@@ -118,4 +152,40 @@ footer {
 
 footer p {
 	padding: 2% 0;
+}
+
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+		
+		h1 {
+		font-size: 30px;
+		margin: 0;
+    margin-top: 2%;
+	}
+
+	.wrapper {
+		width:90%; //measured from psd
+		margin: 0 auto;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+body {
+		background-color: lightgreen;
+	}
+
+	.home {
+		background-image: url(../../images/pic139.png);
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+	body {
+		background-color: lightblue;
+	}
 }

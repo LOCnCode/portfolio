@@ -1,12 +1,11 @@
 #projects:target {
-	padding-top: 100px;
+	padding-top: 70px;
 }
 
 .projectsFeature {
 	width: 100%;
-	// background-color: white;
 	margin-top: 5%;
-	padding: 1% 4%;
+	padding: 1% 0;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
@@ -17,8 +16,9 @@
 }
 
 .projImage {
-	background-color: white;
+	background-color: $PrimaryColour;
 	padding: 6%;
+	
 	img {
 		width: 100%;
 		 display: block;

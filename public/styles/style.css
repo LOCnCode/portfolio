@@ -171,10 +171,10 @@ header {
           justify-content: center; }
 
 .navLeft {
-  width: 50%; }
+  width: 35%; }
 
 .navRight {
-  width: 50%;
+  width: 65%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -187,10 +187,10 @@ header {
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
-          justify-content: center; }
+          justify-content: center;
+  position: relative; }
 
 .navLinks {
-  width: 85%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -206,7 +206,7 @@ header {
           justify-content: space-between; }
   .navLinks li {
     list-style-type: none;
-    margin-right: 0 px; }
+    padding: 0 3%; }
 
 a {
   color: white;
@@ -224,6 +224,80 @@ a:hover {
   font-size: 20px;
   margin: 0 5px; }
 
+.toggle {
+  color: white;
+  position: absolute;
+  top: 0;
+  right: -220px; }
+
+/*
+  When the input is checked
+  grab the next sibling nav with the + selector
+*/
+input.toggle:checked + .navRight {
+  right: 0;
+  /* when the checkbox is checked, put the ul.nav back to right:0; It was at right:-30%;*/ }
+
+/*
+  ~ means grab the next eventual sibling
+*/
+input.toggle:checked ~ .wrapper {
+  right: -30%;
+  /* When the input is checked, slide the wrapper over as well */ }
+
+input.toggle {
+  display: none;
+  /* hide the input, we don't need to see it */ }
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  header {
+    height: 82px; }
+  .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center; }
+  .navLeft, .navRight {
+    width: 100%; }
+  ul {
+    margin: 1%; }
+  .navLinks li {
+    padding: 0 1%; } }
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .toggle {
+    display: unset;
+    top: -10px;
+    right: -165px; }
+  .navRight {
+    width: 25%; }
+  .navLinks {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: right;
+    position: absolute;
+    top: 18px;
+    right: -170px; }
+  a {
+    color: #EC116E; }
+  a:hover {
+    color: #4DBFE6; }
+  .fa {
+    font-size: 26px;
+    margin: 0 5px; } }
+
+#about:target {
+  padding-top: 70px; }
+
 .about {
   margin-bottom: 2%; }
 
@@ -233,34 +307,19 @@ a:hover {
 .aboutFeature {
   width: 45%; }
 
-.aboutDetails {
-  padding: 6% 0; }
-
 .aboutText {
-  padding: 8% 0;
+  padding: 2% 0;
   font-size: 16px;
   line-height: 26px;
   font-weight: 400; }
 
-.detailsContainer {
-  width: 34%; }
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  body {
+    background-color: grey; } }
 
-.detailsBox {
-  margin: 0; }
-
-.detailsContact {
-  padding-top: 5%;
-  padding-left: 6%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start; }
-
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
 .contactImage {
   width: 20%; }
 
@@ -270,20 +329,6 @@ a:hover {
 
 .contactText p {
   padding: 0; }
-
-.featureContainer {
-  width: 66%; }
-
-.feature {
-  width: 75%; }
-
-.featureBox {
-  margin: auto;
-  padding: 5%;
-  background-color: white; }
-
-.feature img {
-  width: 100%; }
 
 #tools:target {
   padding-top: 72px; }
@@ -344,12 +389,12 @@ figcaption {
   font-weight: 400; }
 
 #projects:target {
-  padding-top: 100px; }
+  padding-top: 70px; }
 
 .projectsFeature {
   width: 100%;
   margin-top: 5%;
-  padding: 1% 4%;
+  padding: 1% 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -395,7 +440,7 @@ figcaption {
 
 .formInput {
   width: 100%;
-  border-bottom: 2px solid #e63950; }
+  border-bottom: 3px solid #EC116E; }
 
 input, textarea {
   width: 100%;
@@ -413,15 +458,22 @@ textarea {
 
 .formButton {
   background-color: transparent;
-  border: 2px solid #e63950;
+  border: 2px solid #EC116E;
   margin: 4% 0;
   padding: 2% 5%; }
 
 .relocation {
-  margin-top: 1%; }
+  margin-top: 3%; }
 
 body {
   background-color: #1a0329; }
+
+.home {
+  height: 100vh;
+  background-image: url(../../images/flippedtwin.png);
+  background-position: center;
+  background-size: 100%;
+  background-repeat: no-repeat; }
 
 h1 {
   color: white;
@@ -444,7 +496,7 @@ h2 {
 
 h2:after {
   content: '';
-  background-color: #e63950;
+  background-color: #EC116E;
   width: 22%;
   height: 2px;
   position: absolute;
@@ -454,11 +506,12 @@ h2:after {
 h3 {
   color: white;
   font-size: 20px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  width: 100%; }
 
 h3:after {
   content: '';
-  background-color: #e63950;
+  background-color: #EC116E;
   width: 30%;
   height: 2px;
   position: absolute;
@@ -476,8 +529,17 @@ p, h4 {
   font-size: 18px;
   font-weight: 400; }
 
+.section {
+  padding: 2% 0;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.sectionTitle {
+  width: 100%; }
+
 .wrapper {
-  width: 1140px;
+  width: 80%;
   margin: 0 auto; }
 
 .container {
@@ -497,21 +559,38 @@ p, h4 {
       -ms-flex-pack: center;
           justify-content: center; }
 
-.section {
-  padding: 2% 0;
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
+.detailsContainer {
+  width: 34%; }
 
-.sectionTitle {
+.detailsBox {
+  margin: 0; }
+
+.detailsContact {
+  padding-top: 5%;
+  padding-left: 6%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.featureContainer {
+  width: 66%; }
+
+.feature {
+  width: 75%; }
+
+.featureBox {
+  margin: auto;
+  padding: 5%;
+  background-color: white; }
+
+.feature img {
   width: 100%; }
-
-.home {
-  height: 100vh;
-  background-image: url(../../images/flippedtwin.png);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
 
 footer {
   color: white;
@@ -529,3 +608,25 @@ footer {
 
 footer p {
   padding: 2% 0; }
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  h1 {
+    font-size: 30px;
+    margin: 0;
+    margin-top: 2%; }
+  .wrapper {
+    width: 90%;
+    margin: 0 auto; } }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  body {
+    background-color: lightgreen; }
+  .home {
+    background-image: url(../../images/pic139.png); } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  body {
+    background-color: lightblue; } }

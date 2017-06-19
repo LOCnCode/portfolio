@@ -23,45 +23,57 @@
 							<li><a href="#tools">Tools</a></li>
 							<li><a href="#projects">Projects</a></li> 
 							<li><a href="#contact">Contact</a></li>
+							<li><a href="https://twitter.com/LOCnCode" target="blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.linkedin.com/in/laurie-o-connor-487057113/" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
 						</ul>
-						<div class="social">
-							<a href="https://twitter.com/LOCnCode" target="blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a>
-							<a href="https://www.linkedin.com/in/laurie-o-connor-487057113/" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
-						</div> <!-- social ends -->
-					</div> <!-- nav-half ends -->
+						<input class="toggle" type="checkbox" id="toggle" name="toggle">
+						<label class="toggle" for="toggle">☰ Menu</label>
+					</div> <!-- navRight ends -->
 				</nav> 
 			</div> <!-- wrapper ends -->		
 		</header>
 	</section> <!-- Home section ends -->
 
 	<section class="about section" id="about">
-		<div class="wrapper wrapPic">
-			<div class="container">
+		<div class="wrapper">
+
+			<div class="detailsContainer">
+				<div class="sectionTitle">
+					<h2>About</h2>									
+				</div> <!-- sectionTitle ends -->
+			</div> <!-- detailsContainer ends -->
+
+			<div class="container aboutContainer">
 				<div class="aboutDetails">
 					<div class="detailsBox">
-						<h2 class="detailsTitle">About</h2>
-						<p class="details aboutText">HI! I'm Laurie. A Front End Web Developer based in Kitchener, Ontario. Before coding I was a Department Head who managed a team remotely. During this time I learned that communication and good relationships are key to success. I love exploring green spaces, hitting the rink (on wheels!), or sitting down with great cup of coffee and a good book.  My favourite part of being a FED is seeing a project from start to finish.  Finding opportunities for re-usable code is so satisfying! Now that I’m done bootcamp, I’m excited to continue building on my Javascript and React skills.  I’m also interested in learning more about Web Accessibility and Node. </p>
+						<p class="details aboutText">HI! I'm Laurie. A Front End Web Developer based in Kitchener, Ontario. Before coding I was a Department Head who managed a team remotely. During this time I learned that communication and good relationships are key to success. I love exploring green spaces, hitting the rink (on wheels!), or sitting down with great cup of coffee and a good book.</p>
+						<p class="details aboutText">My favourite part of being a FED is seeing a project from start to finish.  Finding opportunities for re-usable code is so satisfying! Now that I’m done bootcamp, I’m excited to continue building on my Javascript and React skills.  I’m also interested in learning more about Web Accessibility and Node.js. </p>
 					</div> <!-- detailsBox ends -->
-				</div> <!-- detailsContainer ends -->
+				</div> <!-- aboutDetails ends -->
+
 				<div class="aboutFeature">
 					<div class="featureBox feature">
 						<!-- <img class="headshot" src="images/headshot2square.jpg" alt="Laurie's headshot."> -->
 						<img class="headshot" src="images/headshot2017square.jpg" alt="Laurie's headshot.">
 					</div> <!-- featureBox ends -->
-				</div> <!-- featureContainer ends -->
+				</div> <!-- aboutFeature ends -->
 			</div> <!-- container ends -->
+
 		</div> <!-- wrapper ends -->	
 	</section> <!-- About section ends -->
 
 	<section class="section" id="tools">
 		<div class="wrapper">
+
 			<div class="detailsContainer">
 				<div class="sectionTitle">
 					<h2>Tools</h2>									
 				</div> <!-- detailsBox ends -->
 			</div> <!-- detailsContainer ends -->
+
 			<div class="toolsContainer">
 				<div class="toolsfeature">
+
 					<div class="toolsRow topRow">
 						<figure>
 							<i class="devicon devicon-html5-plain"></i>
@@ -83,7 +95,8 @@
 							<i class="devicon devicon-jquery-plain"></i>
 							<figcaption>Jquery</figcaption>
 						</figure>
-					</div> <!-- skillsRow ends -->
+					</div> <!-- toolsRow ends -->
+
 					<div class="toolsRow ">
 						<figure>
 							<i class="devicon devicon-react-original"></i>
@@ -105,9 +118,11 @@
 							<i class="devicon devicon-trello-plain"></i>
 							<figcaption>Trello</figcaption>
 						</figure>
-					</div> <!-- skillsRow ends -->
-				</div> <!-- featureBox ends -->
-			</div> <!-- featureContainer ends -->
+					</div> <!-- toolsRow ends -->
+
+				</div> <!-- toolsFeature ends -->
+			</div> <!-- toolsContainer ends -->
+
 		</div> <!-- wrapper ends -->
 	</section> <!-- Skills section ends -->
 
@@ -180,7 +195,7 @@
 								</div>	
 								<div class="contactSplit">
 									<div class="contactTitle">
-										<h3>Write me</h3>
+										<h3>Write me  </h3>
 									</div>						
 									<div class="contactText">
 										<p>sayhello@laurieoconnor.com</p>										
@@ -208,16 +223,16 @@
 						<form class="contactForm" id="contactForm" method="POST" action="http://www.focuspocus.io/magic/551cd5a20882555d9488a7c8738b97e8">
 							<div class="innerForm">
 								<div class="formInput">
-					      	<input placeholder="Your name" type="text" tabindex="1" required autofocus>	
+					      	<input placeholder="Your name" type="text" tabindex="1">	
 					      </div>
 					      <div class="formInput">			   
-					      	<input placeholder="Your E-mail" type="email" tabindex="2" required>
+					      	<input placeholder="Your E-mail" type="email" tabindex="2">
 					      </div>
 					      <div class="formInput">					   
-					      	<input placeholder="Your telephone" type="tel" tabindex="3" required>	
+					      	<input placeholder="Your telephone" type="tel" tabindex="3">	
 					      </div>
 					      <div class="formInput textarea">					   
-					      	<textarea placeholder="Your message" tabindex="4" required></textarea>
+					      	<textarea placeholder="Your message" tabindex="4"></textarea>
 					      </div>
 							</div> <!-- innerForm ends -->
 				    	<button class="formButton" name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>				    
@@ -231,7 +246,19 @@
 		</footer>	
 	</section> <!-- Contact section ends -->
 
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-	<script src="public/scripts/main.js"></script>
+
+	<!-- <script src="public/scripts/main.js"></script> -->
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="**/scripts/jquery.smooth-scroll.js"></script>
+	<script>
+	$(function(){
+		console.log('Docready is ready!');
+		//add smooth scroll to the nav
+		$('nav a').smoothScroll({
+			offset: -70,
+			speed: 1000
+		});
+  })
+</script> -->
 </body>
 </html>

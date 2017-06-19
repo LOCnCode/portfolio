@@ -225,29 +225,7 @@ a:hover {
   margin: 0 5px; }
 
 .toggle {
-  color: white;
-  position: absolute;
-  top: 0;
-  right: -220px; }
-
-/*
-  When the input is checked
-  grab the next sibling nav with the + selector
-*/
-input.toggle:checked + .navRight {
-  right: 0;
-  /* when the checkbox is checked, put the ul.nav back to right:0; It was at right:-30%;*/ }
-
-/*
-  ~ means grab the next eventual sibling
-*/
-input.toggle:checked ~ .wrapper {
-  right: -30%;
-  /* When the input is checked, slide the wrapper over as well */ }
-
-input.toggle {
-  display: none;
-  /* hide the input, we don't need to see it */ }
+  color: white; }
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
@@ -273,7 +251,7 @@ input.toggle {
     margin-top: 0; }
   .toggle {
     display: unset;
-    top: -8px;
+    top: 27px;
     right: -165px; }
   .navRight {
     width: 25%;
@@ -288,7 +266,7 @@ input.toggle {
             flex-direction: column;
     text-align: right;
     position: absolute;
-    top: 25px;
+    top: 53px;
     right: -170px; }
   a {
     color: #EC116E; }
@@ -296,33 +274,29 @@ input.toggle {
     color: #4DBFE6; }
   .fa {
     font-size: 26px;
-    margin: 0 5px; } }
+    margin: 0 5px; }
+  /*
+  When the input is checked
+  grab the next sibling nav with the + selector
+*/
+  input#toggle:checked + .navLinks {
+    right: 0;
+    /* when the checkbox is checked, put the ul.navRight back to right:0; It was at right:-30%;*/ }
+  /*
+  ~ means grab the next eventual sibling
+*/
+  input#toggle ~ .navLinks {
+    right: -30%;
+    /* When the input is checked, slide the  ul.navRight over as well */ }
+  input#toggle {
+    display: none;
+    /* hide the input, we don't need to see it */ }
+  label[for="toggle"] {
+    /*position the menu so that it doesn't slide off screen when we open it*/
+    position: fixed;
+    top: 80px;
+    left: 208px; } }
 
-#about:target {
-  padding-top: 90px; }
-
-.about {
-  margin-bottom: 2%; }
-
-.aboutDetails {
-  width: 55%; }
-
-.aboutFeature {
-  width: 45%; }
-
-.aboutText {
-  padding: 2% 0;
-  font-size: 16px;
-  line-height: 26px;
-  font-weight: 400; }
-
-/* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-  body {
-    background-color: grey; } }
-
-/* Landscape phone to portrait tablet */
-/* Landscape phones and down */
 #tools:target {
   padding-top: 90px; }
 
@@ -425,7 +399,7 @@ figcaption {
         -ms-flex-direction: column;
             flex-direction: column; }
   .projContainer {
-    width: 80%;
+    width: 90%;
     margin: 2%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -456,6 +430,39 @@ figcaption {
       margin-right: 2%; } }
 
 /* Landscape phones and down */
+#about:target {
+  padding-top: 90px; }
+
+.about {
+  margin-bottom: 2%; }
+
+.aboutDetails {
+  width: 55%; }
+
+.aboutFeature {
+  width: 45%; }
+
+.aboutText {
+  padding: 2% 0;
+  font-size: 16px;
+  line-height: 26px;
+  font-weight: 400; }
+
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+  body {
+    background-color: grey; } }
+
+/* Landscape phone to portrait tablet */
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  .aboutDetails {
+    width: 80%; }
+  .aboutText {
+    width: 100%; }
+  .aboutFeature {
+    display: none; } }
+
 .contactTitle {
   width: 80%;
   position: relative; }
@@ -513,6 +520,22 @@ textarea {
 .relocation {
   margin-top: 3%; }
 
+@media (max-width: 980px) {
+  .detailsContact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+  .detailsContact {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
+/* Landscape phones and down */
 body {
   background-color: #1a0329; }
 
@@ -676,5 +699,18 @@ footer p {
 @media (max-width: 480px) {
   h4 {
     font-weight: 800; }
+  .container {
+    margin: 0;
+    padding: 0;
+    background-color: green; }
+  .detailsContainer {
+    width: 80%;
+    background-color: blue; }
+  .aboutContainer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background-color: purple; }
   body {
     background-color: lightblue; } }

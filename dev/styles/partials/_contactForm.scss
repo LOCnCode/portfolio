@@ -58,10 +58,23 @@ textarea {
 	margin-top: 3%;
 }
 
-/* Landscape phones and down */
-@media (max-width: 480px) {
+@media (max-width: 980px) {
 
 	.detailsContact {
 		flex-direction: column;
 	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+
+	.detailsContact {
+		flex-direction: column;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+
+
 }

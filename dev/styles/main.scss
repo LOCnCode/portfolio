@@ -1,11 +1,9 @@
 @import 'partials/setup';
 @import 'partials/variables';
 @import 'partials/nav';
-@import 'partials/about';
-@import 'partials/detailsContainer';
-@import 'partials/featureContainer';
 @import 'partials/tools';
 @import 'partials/projects';
+@import 'partials/about';
 @import 'partials/contactForm';
 
 body {
@@ -13,6 +11,7 @@ body {
 }
 
 .home {
+
 	height: 100vh;
 	background-image: url(../../images/flippedtwin.png);
 	background-position: center;
@@ -187,6 +186,22 @@ body {
 
 	h4 {
 		font-weight: 800;
+	}
+
+	.container {
+		margin: 0;
+		padding: 0;
+		background-color: green;
+	}
+	
+	.detailsContainer {
+		width: 80%;
+		background-color: blue;
+	}
+	
+	.aboutContainer {
+		flex-direction: column;
+		background-color: purple;
 	}
 
 	body {

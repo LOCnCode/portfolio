@@ -16,7 +16,9 @@
 					<div class="navLeft">
 						<h1>Laurie<span class="nameSplit">OConnor</span></h1>
 					</div> <!-- navLeft ends -->
+						<label class="toggle" for="toggle">☰ Menu</label>
 					<div class="navRight">
+						<input type="checkbox" id="toggle" name="toggle">
 						<ul class="navLinks">
 							<li><a href="#home">Home</a></li>
 							<li><a href="#about">About</a></li>
@@ -26,8 +28,7 @@
 							<li><a href="https://twitter.com/LOCnCode" target="blank"><i class="fa fa-twitter-square" aria-hidden="true"></i></a></li>
 							<li><a href="https://www.linkedin.com/in/laurie-o-connor-487057113/" target="blank"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a></li>
 						</ul>
-						<input class="toggle" type="checkbox" id="toggle" name="toggle">
-						<label class="toggle" for="toggle">☰ Menu</label>
+						
 					</div> <!-- navRight ends -->
 				</nav> 
 			</div> <!-- wrapper ends -->		
@@ -247,18 +248,17 @@
 	</section> <!-- Contact section ends -->
 
 
-	<!-- <script src="public/scripts/main.js"></script> -->
-	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-	<script src="**/scripts/jquery.smooth-scroll.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="dev/scripts/jquery.smooth-scroll.min.js"></script>
 	<script>
 	$(function(){
-		console.log('Docready is ready!');
-		//add smooth scroll to the nav
-		$('nav a').smoothScroll({
-			offset: -70,
+		console.log('its ready!');
+
+		$('a').smoothScroll({
+			offset: -50,
 			speed: 1000
 		});
   })
-</script> -->
+</script>
 </body>
 </html>

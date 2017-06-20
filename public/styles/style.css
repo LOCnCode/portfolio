@@ -215,7 +215,7 @@ a {
   text-decoration: none; }
 
 a:hover {
-  color: #EC116E; }
+  color: #9C03AB; }
 
 .social {
   width: 15%;
@@ -291,10 +291,10 @@ input[type=checkbox], input[type=radio] {
     .navLinks li {
       padding: 7px 0px;
       font-size: 22px; }
-  a {
-    color: #EC116E; }
-  a:hover {
-    color: #4DBFE6; }
+      .navLinks li a {
+        color: #EC116E; }
+      .navLinks li a:hover {
+        color: #9C03AB; }
   .fa {
     font-size: 26px;
     margin: 0 5px; }
@@ -393,10 +393,12 @@ figcaption {
     font-size: 13px; } }
 
 @media (max-width: 360px) {
+  .toolsfeature {
+    margin-top: 15%; }
   .devicon {
     font-size: 26px; }
   figcaption {
-    font-size: 12px; }
+    font-size: 14px; }
   .contactImage {
     display: none; } }
 
@@ -474,6 +476,8 @@ figcaption {
   .projectInfo {
     width: 50%;
     position: relative; }
+    .projectInfo ul {
+      margin-top: 2%; }
   .projectR {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -574,12 +578,6 @@ textarea {
 .contactImage {
   width: 20%;
   margin-right: 5%; }
-
-.formButton {
-  background-color: transparent;
-  border: 2px solid #EC116E;
-  margin: 4% 0;
-  padding: 2% 5%; }
 
 .relocation {
   margin-top: 3%; }
@@ -682,7 +680,7 @@ h4:after {
   content: '';
   background-color: #EC116E;
   width: 30%;
-  height: 3px;
+  height: 2px;
   position: absolute;
   left: 0px;
   top: 90%; }
@@ -773,6 +771,23 @@ footer {
 footer p {
   padding: 2% 0; }
 
+button {
+  background-color: transparent;
+  border: 2px solid #EC116E;
+  margin: 4% 0;
+  padding: 2% 5%;
+  text-transform: uppercase; }
+
+button:hover {
+  background-color: #9C03AB; }
+
+button a:hover {
+  color: white; }
+
+.formButton {
+  color: #EC116E;
+  font-weight: 600; }
+
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
   h1 {
@@ -809,8 +824,6 @@ footer p {
   h4 {
     font-size: 20px;
     font-weight: 800; }
-  h4:after {
-    top: 36%; }
   .container {
     margin: 0;
     padding: 0; }

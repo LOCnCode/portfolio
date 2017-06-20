@@ -97,13 +97,17 @@ figcaption {
 }
 
 @media (max-width: 360px) {
-
+	
+	.toolsfeature {
+    margin-top: 15%;
+  }
+  
 	.devicon {
 		font-size: 26px;
 	}
 
 	figcaption {
-    font-size: 12px;
+    font-size: 14px;
 	}
 
 	.contactImage {

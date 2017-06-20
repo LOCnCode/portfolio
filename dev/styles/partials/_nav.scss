@@ -54,7 +54,7 @@ a {
 }
 
 a:hover {
-	color: $SecondaryColour;
+	color: $Hover;
 }
 
 .social {
@@ -156,16 +156,15 @@ input[type=checkbox], input[type=radio] {
     li {
     	  padding: 7px 0px;
     		font-size: 22px;
+    	a {
+    		color: $SecondaryColour;
+    	}
+			a:hover {
+				color: $Hover;
+			}
     }
 	}
 
-	a {
-		color: $SecondaryColour;
-	}
-
-	a:hover {
-		color: #4DBFE6;
-	}
 
 	.fa {
 		font-size: 26px;

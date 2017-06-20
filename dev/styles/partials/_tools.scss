@@ -42,6 +42,7 @@ li {
 }
 
 figure {
+	flex: 1 0 auto;
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	font-weight: 400;
@@ -64,7 +65,37 @@ figcaption {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+	.devicon {
+		font-size: 45px;
+	}
+
 	figcaption {
 		font-size: 13px;
+	}
+}
+
+@media (max-width: 360px) {
+
+	.toolsFeature {
+		display: table;
+	}
+	
+	.devicon {
+		font-size: 26px;
+	}
+	
+	figcaption {
+    font-size: 10px;
+	}
+
+	// .item {
+	// 	display: table-cell;
+	// 	text-align: center;
+	// 	font-size: 22px;
+	// }
+
+	.contactImage {
+		display: none;
 	}
 }

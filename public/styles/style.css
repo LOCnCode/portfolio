@@ -358,6 +358,9 @@ li {
   color: #1a0329; }
 
 figure {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
   font-family: 'Open Sans', sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -372,8 +375,20 @@ figcaption {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .devicon {
+    font-size: 45px; }
   figcaption {
     font-size: 13px; } }
+
+@media (max-width: 360px) {
+  .toolsFeature {
+    display: table; }
+  .devicon {
+    font-size: 26px; }
+  figcaption {
+    font-size: 10px; }
+  .contactImage {
+    display: none; } }
 
 #projects:target {
   padding-top: 90px; }
@@ -775,3 +790,7 @@ footer p {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column; } }
+
+@media (max-width: 360px) {
+  h1 {
+    font-size: 26px; } }

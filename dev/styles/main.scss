@@ -214,3 +214,9 @@ footer p {
 		flex-direction: column;
 	}
 }
+
+@media (max-width: 360px) {
+	h1 {
+		font-size: 26px;
+	}
+}

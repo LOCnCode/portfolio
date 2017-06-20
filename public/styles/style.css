@@ -204,9 +204,11 @@ header {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between; }
+  .navLinks ul {
+    margin: 0; }
   .navLinks li {
     list-style-type: none;
-    padding: 0 3%; }
+    padding: 0 2%; }
 
 a {
   color: white;
@@ -225,7 +227,11 @@ a:hover {
   margin: 0 5px; }
 
 .toggle {
-  color: white; }
+  color: white;
+  display: none; }
+
+input[type=checkbox], input[type=radio] {
+  display: none; }
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
@@ -266,8 +272,8 @@ a:hover {
             flex-direction: column;
     text-align: right;
     position: absolute;
-    top: 53px;
-    right: -170px; }
+    top: 60px;
+    right: -250px; }
   a {
     color: #EC116E; }
   a:hover {
@@ -275,27 +281,14 @@ a:hover {
   .fa {
     font-size: 26px;
     margin: 0 5px; }
-  /*
-  When the input is checked
-  grab the next sibling nav with the + selector
-*/
   input#toggle:checked + .navLinks {
-    right: 0;
-    /* when the checkbox is checked, put the ul.navRight back to right:0; It was at right:-30%;*/ }
-  /*
-  ~ means grab the next eventual sibling
-*/
-  input#toggle ~ .navLinks {
-    right: -30%;
-    /* When the input is checked, slide the  ul.navRight over as well */ }
+    right: -139px; }
   input#toggle {
-    display: none;
-    /* hide the input, we don't need to see it */ }
+    display: none; }
   label[for="toggle"] {
-    /*position the menu so that it doesn't slide off screen when we open it*/
     position: fixed;
     top: 80px;
-    left: 208px; } }
+    left: 140px; } }
 
 #tools:target {
   padding-top: 90px; }
@@ -355,6 +348,15 @@ figure {
 figcaption {
   font-weight: 400; }
 
+@media (max-width: 768px) {
+  .devicon {
+    font-size: 55px; } }
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+  figcaption {
+    font-size: 13px; } }
+
 #projects:target {
   padding-top: 90px; }
 
@@ -373,7 +375,7 @@ figcaption {
           justify-content: space-between; }
 
 .projContainer {
-  width: 30%; }
+  width: 31%; }
 
 .projImage {
   background-color: white;
@@ -385,11 +387,17 @@ figcaption {
 
 .projectInfo {
   margin-top: 4%; }
+  .projectInfo ul {
+    padding: 0; }
+  .projectInfo li {
+    list-style: none; }
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
+  .projectContainer {
+    width: 32%; }
   .projectInfo ul li {
-    font-size: 18px; } }
+    font-size: 16px; } }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
@@ -415,21 +423,34 @@ figcaption {
         -ms-flex-pack: center;
             justify-content: center; }
   .projImage {
-    background-color: white;
     padding: 2% 0; }
     .projImage img {
-      width: 80%; }
+      width: 85%; }
   .projectInfo {
     width: 50%; }
-  .projectReverse {
+  .projectR {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse; }
-    .projectReverse ul {
-      margin-right: 2%; } }
+    .projectR ul {
+      margin-right: 2%; }
+  .imageMargin {
+    margin-right: 4%; } }
 
 /* Landscape phones and down */
+@media (max-width: 480px) {
+  .projContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; }
+  .projectInfo {
+    width: 75%; } }
+
 #about:target {
   padding-top: 90px; }
 
@@ -444,15 +465,11 @@ figcaption {
 
 .aboutText {
   padding: 2% 0;
-  font-size: 16px;
+  font-size: 17px;
   line-height: 26px;
   font-weight: 400; }
 
 /* Portrait tablet and small desktops */
-@media (max-width: 940px) {
-  body {
-    background-color: grey; } }
-
 /* Landscape phone to portrait tablet */
 /* Landscape phones and down */
 @media (max-width: 480px) {
@@ -468,7 +485,8 @@ figcaption {
   position: relative; }
 
 .contactText p {
-  padding: 0; }
+  padding: 0;
+  font-size: 17px; }
 
 .contactForm {
   width: 100%; }
@@ -530,10 +548,26 @@ textarea {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .detailsContact {
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column; } }
+        -ms-flex-direction: row;
+            flex-direction: row; } }
+
+@media (max-width: 660px) {
+  .detailsContact {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .contactSplit {
+    width: 75%; }
+  .contactLeft {
+    padding-bottom: 10%; }
+  .contactImage {
+    width: 8%; }
+  .featureBox {
+    width: 100%;
+    padding: 0; } }
 
 /* Landscape phones and down */
 body {
@@ -591,13 +625,13 @@ h3:after {
 
 h4 {
   text-transform: uppercase;
-  text-align: center; }
+  font-weight: 700;
+  font-size: 18px; }
 
 p, h4 {
   color: white;
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  font-size: 18px;
   font-weight: 400; }
 
 .section {
@@ -693,7 +727,21 @@ footer p {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
   .home {
-    background-image: url(../../images/pic139.png); } }
+    background-image: url(../../images/pic139.png); }
+  .projectDetailsContainer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; } }
+
+@media (max-width: 660px) {
+  .detailsContainer {
+    width: 100%; }
+  .contactFeature {
+    width: 100%; } }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
@@ -701,16 +749,11 @@ footer p {
     font-weight: 800; }
   .container {
     margin: 0;
-    padding: 0;
-    background-color: green; }
+    padding: 0; }
   .detailsContainer {
-    width: 80%;
-    background-color: blue; }
+    width: 80%; }
   .aboutContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column;
-    background-color: purple; }
-  body {
-    background-color: lightblue; } }
+            flex-direction: column; } }

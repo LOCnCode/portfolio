@@ -70,14 +70,14 @@ h3:after {
 
 h4 {
 	text-transform: uppercase;
-	text-align: center;
+	font-weight: 700;
+	font-size: 18px;
 }
 
 p, h4 {
 	color: $PrimaryColour;
 	margin: 0;
-	font-family: 'Roboto', sans-serif;
-	font-size: 18px;
+	font-family: 'Roboto', sans-serif;	
 	font-weight: 400;
 }
 
@@ -172,12 +172,25 @@ footer p {
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
 
-body {
-		// background-color: lightgreen;
-	}
-
 	.home {
 		background-image: url(../../images/pic139.png);
+	}
+
+	.projectDetailsContainer {
+		display: flex;
+		flex-direction: column;
+	}
+}
+
+
+@media (max-width: 660px) {
+	
+	.detailsContainer {
+    width: 100%;
+	}
+
+ .contactFeature {
+		width: 100%;
 	}
 }
 
@@ -191,20 +204,13 @@ body {
 	.container {
 		margin: 0;
 		padding: 0;
-		background-color: green;
 	}
 	
 	.detailsContainer {
 		width: 80%;
-		background-color: blue;
 	}
 	
 	.aboutContainer {
 		flex-direction: column;
-		background-color: purple;
-	}
-
-	body {
-		background-color: lightblue;
 	}
 }

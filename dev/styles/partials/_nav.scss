@@ -39,9 +39,12 @@ header {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;	
+	ul {
+		margin:0;
+	}
 	li {
 		list-style-type: none;
-		padding: 0 3%;
+		padding: 0 2%;
 		}
 }
 
@@ -67,9 +70,11 @@ a:hover {
 
 .toggle {
 	color: white;
-	// position: absolute;
-	// top: 0;
-	// right: -220px;
+	display: none;
+}
+
+input[type=checkbox], input[type=radio] {
+    display: none;
 }
 
 
@@ -108,70 +113,54 @@ a:hover {
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
-h1 {
-	margin-top: 0;
-}
-	
-.toggle {
-	display: unset;
-	top: 27px;
-	right: -165px;
-}
+	h1 {
+		margin-top: 0;
+	}
+		
+	.toggle {
+		display: unset;
+		top: 27px;
+		right: -165px;
+	}
 
-.navRight {
-	width: 25%;
-	position: fixed;
-}
+	.navRight {
+		width: 25%;
+		position: fixed;
+	}
 
-.navLinks {
-	display: flex;
-	flex-direction: column;
-	text-align: right;
-	position: absolute;
-  top: 53px;
-  right: -170px;
-}
+	.navLinks {
+		display: flex;
+		flex-direction: column;
+		text-align: right;
+		position: absolute;
+	  top: 60px;
+	  right: -250px;
+	}
 
-a {
-	color: $SecondaryColour;
-}
+	a {
+		color: $SecondaryColour;
+	}
 
-a:hover {
-	color: #4DBFE6;
-}
+	a:hover {
+		color: #4DBFE6;
+	}
 
-.fa {
-	font-size: 26px;
-	margin: 0 5px;
-}
+	.fa {
+		font-size: 26px;
+		margin: 0 5px;
+	}
 
-/*
-  When the input is checked
-  grab the next sibling nav with the + selector
-*/
-input#toggle:checked + .navLinks {
-  right:0; /* when the checkbox is checked, put the ul.navRight back to right:0; It was at right:-30%;*/
-}
+	input#toggle:checked + .navLinks {
+	  right: -139px; 
+	}
 
-/*
-  ~ means grab the next eventual sibling
-*/
-input#toggle ~ .navLinks {
-  right:-30%; /* When the input is checked, slide the  ul.navRight over as well */
-}
+	input#toggle {
+	  display: none; 
+	}
 
-input#toggle {
-  display: none; /* hide the input, we don't need to see it */
-}
-
-label[for="toggle"] {
-  /*position the menu so that it doesn't slide off screen when we open it*/
-  position: fixed;
-  top: 80px;
-    left: 208px;
-}
-
-
-
-	
+	label[for="toggle"] {
+	  position: fixed;
+	  top: 80px;
+	  left: 140px;
+	}	
 }

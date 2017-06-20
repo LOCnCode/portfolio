@@ -12,7 +12,7 @@
 }
 
 .projContainer {
-	width: 30%;
+	width: 31%;
 }
 
 .projImage {
@@ -28,20 +28,30 @@
 
 .projectInfo {
 	margin-top: 4%;
+	ul {
+		padding: 0;
+	}
+	li {
+		list-style: none;
+	}
 }
 
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {
+	
+	.projectContainer {
+		width: 32%;
+	}
 
 	.projectInfo ul li {
-		font-size: 18px;		
+		font-size: 16px;		
 	}
 }
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
-	
+
 	.projectsFeature {
 		flex-direction: column;
 	}
@@ -56,10 +66,9 @@
 	}
 
 	.projImage {
-	background-color: $PrimaryColour;
 	padding: 2% 0;		
 		img {
-			width: 80%;
+			width: 85%;
 		}
 	}
 
@@ -67,16 +76,27 @@
 		width: 50%;
 	}
 
-	.projectReverse {
+	.projectR {
 		flex-direction: row-reverse;
 		ul {
 			margin-right: 2%;
 			}
 		}
+
+	.imageMargin {
+		margin-right: 4%;
+	}
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
 
+	.projContainer {
+		display: flex;
+		flex-direction: column;
+	}	
 
+	.projectInfo {
+		width: 75%;
+	}
 }

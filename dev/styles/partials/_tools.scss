@@ -51,3 +51,20 @@ figure {
 figcaption {
 	font-weight: 400; 
 }
+
+@media (max-width: 940px) {
+	
+}
+
+@media (max-width: 768px) {
+	.devicon {
+		font-size: 55px;
+	}
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	figcaption {
+		font-size: 13px;
+	}
+}

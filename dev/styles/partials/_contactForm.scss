@@ -66,15 +66,18 @@ textarea {
 	}
 }
 
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+	#contact:target {
+		padding-top: 90px;
+	}
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 660px) {
 	
 	.detailsContact {
 		flex-direction: row;
 	}	
-}
-
-@media (max-width: 660px) {
 
 	.detailsContact {
 		flex-direction: row;
@@ -100,5 +103,4 @@ textarea {
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
-	
 }

@@ -57,8 +57,8 @@
 	}
 
 	.projContainer {
-		width: 90%;
-		margin: 2%;
+		width: 100%;
+    margin: 2% 0;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
@@ -66,7 +66,10 @@
 	}
 
 	.projImage {
-	padding: 2% 0;		
+		padding: 2% 0;
+    margin-top: 10%;
+    width: 100%;
+    		
 		img {
 			width: 85%;
 		}
@@ -74,6 +77,7 @@
 
 	.projectInfo {
 		width: 50%;
+		position: relative;
 	}
 
 	.projectR {
@@ -97,6 +101,6 @@
 	}	
 
 	.projectInfo {
-		width: 75%;
+		width: 100%;
 	}
 }

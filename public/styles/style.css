@@ -369,24 +369,34 @@ figure {
 figcaption {
   font-weight: 400; }
 
+.tools2 {
+  display: none; }
+
 @media (max-width: 768px) {
   .devicon {
     font-size: 55px; } }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+  .toolsFeature {
+    width: 100%;
+    margin-top: 7%; }
+  .tools1 {
+    display: none; }
+  .tools2 {
+    display: inherit !important; }
+  .row2 {
+    padding-bottom: 2%; }
   .devicon {
     font-size: 45px; }
   figcaption {
     font-size: 13px; } }
 
 @media (max-width: 360px) {
-  .toolsFeature {
-    display: table; }
   .devicon {
     font-size: 26px; }
   figcaption {
-    font-size: 10px; }
+    font-size: 12px; }
   .contactImage {
     display: none; } }
 
@@ -440,8 +450,8 @@ figcaption {
         -ms-flex-direction: column;
             flex-direction: column; }
   .projContainer {
-    width: 90%;
-    margin: 2%;
+    width: 100%;
+    margin: 2% 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -456,11 +466,14 @@ figcaption {
         -ms-flex-pack: center;
             justify-content: center; }
   .projImage {
-    padding: 2% 0; }
+    padding: 2% 0;
+    margin-top: 10%;
+    width: 100%; }
     .projImage img {
       width: 85%; }
   .projectInfo {
-    width: 50%; }
+    width: 50%;
+    position: relative; }
   .projectR {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: reverse;
@@ -482,7 +495,7 @@ figcaption {
         -ms-flex-direction: column;
             flex-direction: column; }
   .projectInfo {
-    width: 75%; } }
+    width: 100%; } }
 
 #about:target {
   padding-top: 90px; }
@@ -578,15 +591,17 @@ textarea {
         -ms-flex-direction: column;
             flex-direction: column; } }
 
-/* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+  #contact:target {
+    padding-top: 90px; } }
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 660px) {
   .detailsContact {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; } }
-
-@media (max-width: 660px) {
+            flex-direction: row; }
   .detailsContact {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
@@ -659,7 +674,18 @@ h3:after {
 h4 {
   text-transform: uppercase;
   font-weight: 700;
-  font-size: 18px; }
+  font-size: 22px;
+  padding: 4% 0;
+  position: relative; }
+
+h4:after {
+  content: '';
+  background-color: #EC116E;
+  width: 30%;
+  height: 3px;
+  position: absolute;
+  left: 0px;
+  top: 90%; }
 
 p, h4 {
   color: white;
@@ -753,6 +779,8 @@ footer p {
     font-size: 30px;
     margin: 0;
     margin-top: 2%; }
+  h4 {
+    font-size: 20px; }
   .wrapper {
     width: 90%;
     margin: 0 auto; } }
@@ -779,17 +807,26 @@ footer p {
 /* Landscape phones and down */
 @media (max-width: 480px) {
   h4 {
+    font-size: 20px;
     font-weight: 800; }
+  h4:after {
+    top: 36%; }
   .container {
     margin: 0;
     padding: 0; }
   .detailsContainer {
-    width: 80%; }
+    width: 100%; }
+  .detailsContact {
+    padding-left: 0; }
   .aboutContainer {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
-            flex-direction: column; } }
+            flex-direction: column; }
+  .featureBox {
+    margin: 0;
+    padding: 5%;
+    width: 100%; } }
 
 @media (max-width: 360px) {
   h1 {

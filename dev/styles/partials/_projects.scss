@@ -32,10 +32,14 @@
 		padding: 0;
 	}
 	li {
+		font-size: 18px;
 		list-style: none;
 	}
 }
 
+.projectHide {
+	display: none;
+}
 
 /* Portrait tablet and small desktops */
 @media (max-width: 940px) {

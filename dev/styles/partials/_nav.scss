@@ -44,7 +44,7 @@ header {
 	}
 	li {
 		list-style-type: none;
-		padding: 0 2%;
+		padding: 0 10px;
 		}
 }
 
@@ -55,6 +55,7 @@ a {
 
 a:hover {
 	color: $Hover;
+	margin: 0;
 }
 
 .social {

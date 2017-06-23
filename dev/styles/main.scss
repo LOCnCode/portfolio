@@ -70,7 +70,7 @@ h3:after {
 h4 {
 	text-transform: uppercase;
 	font-weight: 700;
-	font-size: 22px;
+	font-size: 18px;
 	padding: 4% 0;
 	position: relative;
 }
@@ -156,12 +156,18 @@ footer {
 	font-family: 'Open Sans', sans-serif;
 	text-transform: uppercase;
 	display: flex;
+	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
 
 footer p {
 	padding: 2% 0;
+}
+
+.credit {
+	font-size: 12px;
+	padding-top: 0;
 }
 
 button {
@@ -203,6 +209,10 @@ button a:hover {
 		width:90%; //measured from psd
 		margin: 0 auto;
 	}
+
+	.detailsContact {
+		flex-direction: column;
+	}
 }
 
 /* Landscape phone to portrait tablet */
@@ -215,6 +225,19 @@ button a:hover {
 	.projectDetailsContainer {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.detailsContainer {
+		width: 100%;
+	}
+
+	.featureContainer {
+		width: 100%;
+	}
+
+	.detailsContact {
+		flex-direction: row;
+		padding-left: 0;
 	}
 }
 
@@ -267,6 +290,11 @@ button a:hover {
 }
 
 @media (max-width: 360px) {
+
+	.home {
+		height: 80vh;
+	}
+	
 	h1 {
 		font-size: 26px;
 	}
